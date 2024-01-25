@@ -1,0 +1,39 @@
+Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 45px 100px;
+
+  img {
+    width: 120px;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 57px;
+      list-style: none;
+
+      li {
+        padding-bottom: 4px;
+        border-bottom: 1px solid white;
+
+
+        a {
+          text-decoration: none;
+          color: #000;
+          text-align: right;
+          font-family: Montserrat;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+        }
+
+        &:hover{
+            border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+}
