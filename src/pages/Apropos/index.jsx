@@ -1,21 +1,32 @@
-import './Apropos.scss'
-import Banner from '../../components/Banner'
-import kalen from '../../assets/images/kalen.jpeg'
-function Apropos(){
-    return (<main>
-        <Banner cover={kalen}></Banner>
+import "./Apropos.scss";
+import Banner from "../../components/Banner";
+import kalen from "../../assets/images/kalen.jpeg";
+import Collapse from "../../components/Collapse";
 
-        <div className='collapse'>
-            <div className='collapse__header'>
-                <h2>titre</h2>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            <div className='collapse__bady'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni exercitationem ipsam quisquam beatae quas sapiente. Odit omnis tempore inventore delectus, quam quos fugiat et perferendis fuga culpa consequuntur aspernatur facere?
-            </div>
-
-        </div>
-    </main>)
+function Apropos() {
+  return (
+    <main>
+      <Banner cover={kalen}></Banner>
+      <div className="collapses">
+        <Collapse
+          title="Fiabilité"
+          contenu="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
+        />
+        <Collapse
+          title="Respect"
+          contenu="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
+        />
+        <Collapse
+          title="Service"
+          contenu="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
+        />
+        <Collapse
+          title="Sécurité"
+          contenu="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
+        />
+      </div>
+    </main>
+  );
 }
 
-export default Apropos
+export default Apropos;

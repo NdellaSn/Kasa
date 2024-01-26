@@ -1,0 +1,42 @@
+@import "../../utils/styles/global.scss";
+
+.collapse {
+  .collapse__header {
+    background: $orange-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 15px;
+
+    h2 {
+      margin: 0;
+      color: #fff;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      @media (max-width: 765px) {
+        font-size: 13px;
+      }
+    }
+
+    img{
+        @media (max-width: 765px) {
+            width: 16px;
+          }
+    }
+  }
+
+  .collapse__bady {
+    background: #f6f6f673;
+    padding: 20px;
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+
+    @media (max-width: 765px) {
+      font-size: 12px;
+    }
+  }
+}
