@@ -1,7 +1,10 @@
-import "./Home.css";
+import Banner from "../../components/Banner";
+import "./Home.scss";
 function Home() {
   return (
-      <main>Hello Kasa !</main>
+    <main>
+      <Banner texte="Chez vous, partout et ailleurs" />
+    </main>
   );
 }
 

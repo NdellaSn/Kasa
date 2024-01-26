@@ -1,0 +1,47 @@
+$bannerHigth: 220px;
+
+@mixin banner_contain($hauteur: 100%) {
+  width: 100%;
+  border-radius: 25px;
+  height: $hauteur;
+}
+
+.banner {
+  position: relative;
+  height: $bannerHigth;
+
+  img {
+    object-fit: cover;
+    @include banner_contain($bannerHigth);
+  }
+
+  .banner__bg {
+    @include banner_contain;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  .banner__text {
+    @include banner_contain;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: #fff;
+
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      -webkit-text-stroke-width: 1;
+      -webkit-text-stroke-color: #000;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+}

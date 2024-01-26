@@ -1,0 +1,22 @@
+Footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 66px;
+  padding-bottom: 29px;
+
+  img {
+    width: 122px;
+    height: 39.44px;
+  }
+
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
