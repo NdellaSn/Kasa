@@ -1,0 +1,43 @@
+@import "../../utils/styles/global.scss";
+
+@mixin location__contain {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+}
+
+
+.location {
+    position: relative;
+
+    .location__img {
+      @include location__contain;
+      object-fit: cover;
+    }
+
+    .location__img__placeholder {
+      @include location__contain;
+      height: 260px;
+      background-color: $orange-color;
+    }
+
+    &__bg {
+      @include location__contain;
+      position: absolute;
+      z-index: 2;
+      background: $gray-gradient-color;
+      top: 0;
+    }
+
+    .location__titre {
+      position: absolute;
+      z-index: 3;
+      bottom: 20px;
+      left: 20px;
+      margin: 0;
+      color: #fff;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
