@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.scss";
 import logo from "../../assets/images/logo.png";
 
 function Header() {
+  const location = useLocation();
+  const atHome = location.pathname === "/";
+
   return (
     <header>
       <Link to="/">
@@ -10,10 +13,10 @@ function Header() {
       </Link>
       <nav>
         <ul>
-          <li>
+          <li className={atHome ?  "menu_select" :''}>
             <Link to="/">Accueil</Link>
           </li>
-          <li>
+          <li className={!atHome ? "menu_select":''}>
             <Link to="/a propos">A Propos</Link>
           </li>
         </ul>

@@ -19,7 +19,6 @@ Header {
         padding-bottom: 4px;
         border-bottom: 1px solid white;
 
-
         a {
           text-decoration: none;
           color: #000;
@@ -29,9 +28,10 @@ Header {
           font-weight: 500;
         }
 
-        &:hover{
-            border-bottom: 1px solid black;
-        }
+      }
+
+      .menu_select {
+        border-bottom: 1px solid black;
       }
     }
   }

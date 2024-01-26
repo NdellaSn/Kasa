@@ -1,15 +1,17 @@
 import "./ListeLocation.scss";
-import Location from "../Location";
+import Card from "../Card";
+import locationData from "../../data/listLogement.json";
 
 function ListeLocation() {
   return (
     <section className="locations">
-        <Location titre="titre 1"/>
-        <Location titre="titre 2"/>
-        <Location titre="titre 3"/>
-        <Location titre="titre 4"/>
-        <Location titre="titre 5"/>
-        <Location titre="titre 6"/>
+      {locationData.map((logement) => (
+        <Card
+          key={logement.id}
+          titre={logement.title}
+          cover={logement.cover}
+        />
+      ))}
     </section>
   );
 }

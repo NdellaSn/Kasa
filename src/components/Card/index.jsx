@@ -1,6 +1,6 @@
-import "./Location.scss";
+import "./Card.scss";
 
-function Location({ cover, titre }) {
+function Card({ cover, titre }) {
   return (
     <article className="location">
       {
@@ -15,4 +15,4 @@ function Location({ cover, titre }) {
     </article>
   );
 }
-export default Location;
+export default Card;
