@@ -8,7 +8,7 @@ $bannerHigth: 220px;
 
 .banner {
   position: relative;
-  height: $bannerHigth;
+  @include banner_contain($bannerHigth);
 
   @media (max-width: 765px) {
     height: 110px;

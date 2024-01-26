@@ -20,23 +20,30 @@
       }
     }
 
-    img{
-        @media (max-width: 765px) {
-            width: 16px;
-          }
+    img {
+      @media (max-width: 765px) {
+        width: 16px;
+      }
     }
   }
 
   .collapse__bady {
     background: #f6f6f673;
     padding: 20px;
-    color: #000;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
 
-    @media (max-width: 765px) {
-      font-size: 12px;
+    * {
+      color: #000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
+
+      @media (max-width: 765px) {
+        font-size: 12px;
+      }
     }
   }
 }
