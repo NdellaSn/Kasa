@@ -17,7 +17,7 @@ function Header() {
             <Link to="/">Accueil</Link>
           </li>
           <li className={!atHome ? "menu_select":''}>
-            <Link to="/a propos">A Propos</Link>
+            <Link to="/apropos">A Propos</Link>
           </li>
         </ul>
       </nav>

@@ -7,6 +7,12 @@ Footer {
   padding-top: 66px;
   padding-bottom: 29px;
   margin-top: 50px;
+
+  @media (max-width: 765px) {
+    padding: 60px 120px;
+    margin-top: 30px;
+  }
+
   img {
     width: 122px;
     height: 39.44px;
@@ -18,5 +24,9 @@ Footer {
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
+
+    @media (max-width: 765px) {
+      font-size: 12px;
+    }
   }
 }
