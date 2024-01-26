@@ -6,7 +6,7 @@
   gap: 100px;
   align-items: center;
   @media (max-width: 765px) {
-    gap: 113px;
+    gap: 90px;
   }
 
   * {
@@ -19,7 +19,7 @@
 
     @media (max-width: 765px) {
       font-size: 96px;
-      padding-top: 113px;
+      padding-top: 90px;
     }
   }
 
@@ -27,9 +27,9 @@
     font-size: 30px;
     font-weight: 500;
     color: $orange-color;
+    text-align: center;
     @media (max-width: 765px) {
       font-size: 18px;
-      padding: 0 57px; ;
     }
   }
 
