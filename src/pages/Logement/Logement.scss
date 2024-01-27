@@ -1,6 +1,80 @@
+@import "../../utils/styles/global.scss";
+
 .logement {
-    padding: 0 100px;
-    @media (max-width:765px) {
-        padding:0 20px;
+  padding: 0 100px;
+  @media (max-width: 765px) {
+    padding: 0 20px;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .logement__details {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+
+    .logement__lieu__and__tag {
+      .logement__title {
+        color: $orange-color;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
       }
+
+      .logement__lieu {
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        margin-top: 10px;
+      }
+      .logement__tags {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+
+        .logement__tags__btn {
+          background: $orange-color;
+          width: 115px;
+          height: 25px;
+          color: #fff;
+          text-align: center;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          border: none;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .logement__host__and__rate {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: center;
+
+      .logement__host {
+        display: flex;
+        gap: 10px;
+        
+        .logement__host_name {
+          color: $orange-color;
+          text-align: right;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+        }
+        .logement__host_photo {
+          width: 64px;
+          height: 64px;
+          border-radius: 32px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
