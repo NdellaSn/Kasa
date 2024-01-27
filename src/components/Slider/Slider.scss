@@ -1,0 +1,41 @@
+.slider {
+  position: relative;
+  height: 415px;
+
+  .slider__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .slider__btns {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 44%;
+    width: 100%;
+
+    button {
+      background: none;
+      border: none;
+
+      img {
+        width: 46.68px;
+        height: 79.2px;
+      }
+    }
+  }
+
+  .slider__number {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
