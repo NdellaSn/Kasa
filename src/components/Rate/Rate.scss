@@ -1,0 +1,17 @@
+.logement__rate {
+  display: flex;
+  gap: 10px;
+  @media (max-width: 765px) {
+    gap: 5px;
+
+  }
+  img {
+    width: 24.75px;
+    height: 24px;
+
+    @media (max-width: 765px) {
+        width: 14.75px;
+        height: 14px;
+      }
+  }
+}

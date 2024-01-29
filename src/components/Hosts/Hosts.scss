@@ -1,0 +1,33 @@
+@import "../../utils/styles/global.scss";
+
+.logement__host {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  @media (max-width: 765px) {
+    order: 1;
+  }
+
+  .logement__host_name {
+    color: $orange-color;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    @media (max-width: 765px) {
+      font-size: 12px;
+    }
+  }
+
+  .logement__host_photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    object-fit: cover;
+    @media (max-width: 765px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

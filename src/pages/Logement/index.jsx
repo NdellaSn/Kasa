@@ -4,8 +4,12 @@ import './Logement.scss'
 
 import './Logement.scss'
 import Slider from '../../components/Slider'
-import { redirect, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import locationData from "../../data/listLogement.json";
+import Tags from '../../components/Tags';
+import Hosts from '../../components/Hosts';
+import Rate from '../../components/Rate';
+import Collapse from '../../components/Collapse';
 
 function Logement() {
     const { id } = useParams();
@@ -22,21 +26,19 @@ function Logement() {
                 <div className='logement__lieu__and__tag' >
                     <h1 className='logement__title'>{locationCurrent.title}</h1>
                     <p className='logement__lieu'>{locationCurrent.location}</p>
-                    <div className="logement__tags">
-                        {
-                            locationCurrent.tags.map(
-                                (tag, index) => <button key={'tag-' + index} className='logement__tags__btn'> {tag}</button>
-                            )
-                        }
-                    </div>
+                    <Tags listeTags={locationCurrent.tags} />
                 </div>
                 <div className='logement__host__and__rate'>
-                    <div className='logement__host'>
-                        <p className='logement__host_name'>{locationCurrent.host.name}</p>
-                        <img className='logement__host_photo' src={locationCurrent.host.picture} alt={locationCurrent.host.name} />
-                    </div>
-                    <div className='logement__rate'></div>
+                    <Hosts name={locationCurrent.host.name} picture={locationCurrent.host.picture} />
+                    <Rate rating={locationCurrent.rating} />
                 </div>
+            </div>
+
+            <div className='logement__description__equipement'>
+                <Collapse title='Description' contenu={locationCurrent.description} />
+                <Collapse title='Equipements' contenu={locationCurrent.equipments.map(
+                    (equipement) => <p>{equipement}</p>
+                )} />
             </div>
 
         </main>

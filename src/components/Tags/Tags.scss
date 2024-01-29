@@ -1,0 +1,26 @@
+@import "../../utils/styles/global.scss";
+
+.logement__tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+
+  .logement__tags__btn {
+    background: $orange-color;
+    width: 115px;
+    height: 25px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+
+    @media (max-width: 765px) {
+      font-size: 10px;
+      width: 84px;
+      height: 18px;
+    }
+  }
+}
