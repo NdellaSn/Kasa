@@ -49,7 +49,7 @@
     .logement__host__and__rate {
       display: flex;
       flex-direction: column;
-      align-items: end;
+      align-items: flex-end;
       justify-content: center;
       gap: 21px;
       @media (max-width: 765px) {
