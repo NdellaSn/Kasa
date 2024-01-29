@@ -7,7 +7,9 @@
 
   .logement__tags__btn {
     background: $orange-color;
-    width: 115px;
+    min-width: 115px;
+    padding-left: 8px;
+    padding-right: 8px;
     height: 25px;
     color: #fff;
     text-align: center;
