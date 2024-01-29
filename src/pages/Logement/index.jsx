@@ -35,7 +35,7 @@ function Logement() {
             </div>
 
             <div className='logement__description__equipement'>
-                <Collapse title='Description' contenu={locationCurrent.description} />
+                <Collapse title='Description' contenu={<p>{locationCurrent.description}</p>} />
                 <Collapse title='Equipements' contenu={locationCurrent.equipments.map(
                     (equipement) => <p>{equipement}</p>
                 )} />
