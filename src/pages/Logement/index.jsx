@@ -20,12 +20,12 @@ function Logement() {
     )
 
     useEffect(
-        ()=>{
+        () => {
             if (locationCurrent === undefined) {
                 navigate("/error");
             }
         },
-        []
+        [locationCurrent, navigate]
     )
 
     return (
