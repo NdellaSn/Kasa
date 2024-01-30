@@ -1,12 +1,12 @@
 import "./Apropos.scss";
 import Banner from "../../components/Banner";
-import kalen from "../../assets/images/kalen.jpeg";
+import banner_cover from "../../assets/images/kalen.jpeg";
 import Collapse from "../../components/Collapse";
 
 function Apropos() {
   return (
     <main>
-      <Banner cover={kalen}></Banner>
+      <Banner cover={banner_cover}></Banner>
       <div className="collapses">
         <Collapse
           title="Fiabilité"

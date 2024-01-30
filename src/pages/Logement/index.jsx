@@ -1,21 +1,31 @@
 import './Logement.scss'
-
-
-
-import './Logement.scss'
 import Slider from '../../components/Slider'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import locationData from "../../data/listLogement.json";
 import Tags from '../../components/Tags';
 import Hosts from '../../components/Hosts';
 import Rate from '../../components/Rate';
 import Collapse from '../../components/Collapse';
+import { useEffect } from 'react';
 
 function Logement() {
+
+    const navigate = useNavigate();
+
+    //récupérer l'identifiant qui se trouve au niveau de la route 
     const { id } = useParams();
 
     const [locationCurrent] = locationData.filter(
         (location) => location.id === id
+    )
+
+    useEffect(
+        ()=>{
+            if (locationCurrent === undefined) {
+                navigate("/error");
+            }
+        },
+        []
     )
 
     return (
