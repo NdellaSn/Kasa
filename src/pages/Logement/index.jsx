@@ -9,16 +9,17 @@ import Collapse from '../../components/Collapse';
 import { useEffect } from 'react';
 
 function Logement() {
-
+//pour redriger vers une autre route
     const navigate = useNavigate();
 
-    //récupérer l'identifiant qui se trouve au niveau de la route 
+//utilise le hook useParams de react router dom pour extraire l'identifiant id de la route
     const { id } = useParams();
 
+//filtré les données qui se trouve dans le tableau locationData en utilssant l'id extrait de la route
     const [locationCurrent] = locationData.filter(
         (location) => location.id === id
     )
-
+//si la route est indéfinie il nous renvoit vers la page 404 
     useEffect(
         () => {
             if (locationCurrent === undefined) {
@@ -27,7 +28,7 @@ function Logement() {
         },
         [locationCurrent, navigate]
     )
-
+// si locationCurrent est définie la foction retourne les détails du logement 
     return (
         locationCurrent &&
         <main className='logement'>
